@@ -104,20 +104,20 @@ curl -X GET "https://api.fiscode.connect/v1/customers/12345" \\
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
-          <Card>
+          <Card data-pendo-id="code-examples-main-card">
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 Code Examples
                 <div className="flex space-x-2">
-                  <Button size="sm" variant="outline">
+                  <Button size="sm" variant="outline" data-pendo-id="code-examples-copy-button">
                     <Copy className="h-4 w-4 mr-2" />
                     Copy
                   </Button>
-                  <Button size="sm" variant="outline">
+                  <Button size="sm" variant="outline" data-pendo-id="code-examples-download-button">
                     <Download className="h-4 w-4 mr-2" />
                     Download
                   </Button>
-                  <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                  <Button size="sm" className="bg-green-600 hover:bg-green-700" data-pendo-id="code-examples-sandbox-button">
                     <Play className="h-4 w-4 mr-2" />
                     Run in Sandbox
                   </Button>
@@ -128,11 +128,11 @@ curl -X GET "https://api.fiscode.connect/v1/customers/12345" \\
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Tabs defaultValue="javascript" className="w-full">
+              <Tabs defaultValue="javascript" className="w-full" data-pendo-id="code-examples-tabs">
                 <TabsList className="grid w-full grid-cols-3">
-                  <TabsTrigger value="javascript">JavaScript</TabsTrigger>
-                  <TabsTrigger value="python">Python</TabsTrigger>
-                  <TabsTrigger value="curl">cURL</TabsTrigger>
+                  <TabsTrigger value="javascript" data-pendo-id="code-tab-javascript">JavaScript</TabsTrigger>
+                  <TabsTrigger value="python" data-pendo-id="code-tab-python">Python</TabsTrigger>
+                  <TabsTrigger value="curl" data-pendo-id="code-tab-curl">cURL</TabsTrigger>
                 </TabsList>
                 
                 {Object.entries(codeExamples).map(([lang, code]) => (
@@ -150,7 +150,7 @@ curl -X GET "https://api.fiscode.connect/v1/customers/12345" \\
         </div>
 
         <div className="space-y-6">
-          <Card>
+          <Card data-pendo-id="api-endpoints-card">
             <CardHeader>
               <CardTitle>API Endpoints</CardTitle>
               <CardDescription>Available FIS Code Connect APIs</CardDescription>
@@ -178,24 +178,24 @@ curl -X GET "https://api.fiscode.connect/v1/customers/12345" \\
             </CardContent>
           </Card>
 
-          <Card>
+          <Card data-pendo-id="quick-links-card">
             <CardHeader>
               <CardTitle>Quick Links</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
-              <Button variant="ghost" className="w-full justify-start" size="sm">
+              <Button variant="ghost" className="w-full justify-start" size="sm" data-pendo-id="quick-link-api-docs">
                 📚 API Documentation
               </Button>
-              <Button variant="ghost" className="w-full justify-start" size="sm">
+              <Button variant="ghost" className="w-full justify-start" size="sm" data-pendo-id="quick-link-sandbox">
                 🔧 Sandbox Environment
               </Button>
-              <Button variant="ghost" className="w-full justify-start" size="sm">
+              <Button variant="ghost" className="w-full justify-start" size="sm" data-pendo-id="quick-link-api-keys">
                 🔑 API Key Management
               </Button>
-              <Button variant="ghost" className="w-full justify-start" size="sm">
+              <Button variant="ghost" className="w-full justify-start" size="sm" data-pendo-id="quick-link-analytics">
                 📊 Usage Analytics
               </Button>
-              <Button variant="ghost" className="w-full justify-start" size="sm">
+              <Button variant="ghost" className="w-full justify-start" size="sm" data-pendo-id="quick-link-support">
                 💬 Developer Support
               </Button>
             </CardContent>

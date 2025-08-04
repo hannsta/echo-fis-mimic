@@ -10,19 +10,19 @@ const Index = () => {
       <Header />
       
       <main className="container mx-auto px-6 py-8">
-        <Tabs defaultValue="dashboard" className="w-full">
+        <Tabs defaultValue="dashboard" className="w-full" data-pendo-id="main-navigation-tabs">
           <div className="flex justify-center mb-8">
             <TabsList className="grid w-full max-w-md grid-cols-2">
-              <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
-              <TabsTrigger value="integration">Integration</TabsTrigger>
+              <TabsTrigger value="dashboard" data-pendo-id="main-tab-dashboard">Dashboard</TabsTrigger>
+              <TabsTrigger value="integration" data-pendo-id="main-tab-integration">Integration</TabsTrigger>
             </TabsList>
           </div>
           
-          <TabsContent value="dashboard">
+          <TabsContent value="dashboard" data-pendo-id="dashboard-content">
             <Dashboard />
           </TabsContent>
           
-          <TabsContent value="integration">
+          <TabsContent value="integration" data-pendo-id="integration-content">
             <CodeExamples />
           </TabsContent>
         </Tabs>
@@ -36,10 +36,10 @@ const Index = () => {
               <p className="text-gray-400">Powering financial innovation through seamless integration</p>
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="hover:text-blue-300 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-blue-300 transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-blue-300 transition-colors">Support</a>
-              <a href="#" className="hover:text-blue-300 transition-colors">Contact</a>
+              <a href="#" className="hover:text-blue-300 transition-colors" data-pendo-id="footer-privacy-policy">Privacy Policy</a>
+              <a href="#" className="hover:text-blue-300 transition-colors" data-pendo-id="footer-terms-service">Terms of Service</a>
+              <a href="#" className="hover:text-blue-300 transition-colors" data-pendo-id="footer-support">Support</a>
+              <a href="#" className="hover:text-blue-300 transition-colors" data-pendo-id="footer-contact">Contact</a>
             </div>
           </div>
         </div>

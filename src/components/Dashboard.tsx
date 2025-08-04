@@ -30,11 +30,11 @@ const Dashboard = () => {
               Connect to our financial services APIs and start building powerful integrations in minutes.
             </p>
             <div className="flex space-x-3">
-              <Button className="bg-blue-600 hover:bg-blue-700">
+              <Button className="bg-blue-600 hover:bg-blue-700" data-pendo-id="dashboard-view-documentation">
                 <Code className="h-4 w-4 mr-2" />
                 View Documentation
               </Button>
-              <Button variant="outline">
+              <Button variant="outline" data-pendo-id="dashboard-try-sandbox">
                 Try Sandbox
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
@@ -59,7 +59,7 @@ const balance = await fis.accounts
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card>
+        <Card data-pendo-id="dashboard-stats-active-connections">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Active Connections</CardTitle>
             <Database className="h-4 w-4 text-blue-500" />
@@ -70,7 +70,7 @@ const balance = await fis.accounts
           </CardContent>
         </Card>
         
-        <Card>
+        <Card data-pendo-id="dashboard-stats-api-calls">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">API Calls Today</CardTitle>
             <Zap className="h-4 w-4 text-green-500" />
@@ -81,7 +81,7 @@ const balance = await fis.accounts
           </CardContent>
         </Card>
         
-        <Card>
+        <Card data-pendo-id="dashboard-stats-uptime">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">System Uptime</CardTitle>
             <CheckCircle className="h-4 w-4 text-green-500" />
@@ -95,7 +95,7 @@ const balance = await fis.accounts
 
       {/* API Status and Recent Activity */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card>
+        <Card data-pendo-id="dashboard-api-status-card">
           <CardHeader>
             <CardTitle>API Service Status</CardTitle>
             <CardDescription>Real-time status of all FIS services</CardDescription>
@@ -129,7 +129,7 @@ const balance = await fis.accounts
           </CardContent>
         </Card>
 
-        <Card>
+        <Card data-pendo-id="dashboard-recent-activity-card">
           <CardHeader>
             <CardTitle>Recent Activity</CardTitle>
             <CardDescription>Latest integration and API activity</CardDescription>
