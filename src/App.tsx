@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,9 +7,33 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
+declare global {
+  interface Window {
+    pendo: any;
+  }
+}
+
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  useEffect(() => {
+    if (window.pendo) {
+      window.pendo.initialize({
+        visitor: {
+          id: 'visitor-placeholder-id',
+          email: 'user@example.com',
+          full_name: 'Demo User'
+        },
+        account: {
+          id: 'account-placeholder-id',
+          name: 'Demo Account',
+          is_paying: true
+        }
+      });
+    }
+  }, []);
+
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -22,6 +47,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;
