@@ -21,42 +21,42 @@ const Header = () => {
             </div>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-4" data-pendo-id="header-main-navigation">
             <Link 
               to="/" 
-              className={`hover:text-blue-300 transition-colors ${isActive('/') ? 'text-blue-300 font-medium' : ''}`}
+              className={`px-3 py-2 rounded-md text-sm font-medium hover:text-blue-300 transition-colors ${isActive('/') ? 'bg-blue-700 text-blue-100' : ''}`}
               data-pendo-id="header-nav-dashboard"
             >
               Dashboard
             </Link>
             <Link 
               to="/integration" 
-              className={`hover:text-blue-300 transition-colors ${isActive('/integration') ? 'text-blue-300 font-medium' : ''}`}
+              className={`px-3 py-2 rounded-md text-sm font-medium hover:text-blue-300 transition-colors ${isActive('/integration') ? 'bg-blue-700 text-blue-100' : ''}`}
               data-pendo-id="header-nav-integration"
             >
               Integration
             </Link>
             <Link 
               to="/setup" 
-              className={`hover:text-blue-300 transition-colors ${isActive('/setup') ? 'text-blue-300 font-medium' : ''}`}
+              className={`px-3 py-2 rounded-md text-sm font-medium hover:text-blue-300 transition-colors ${isActive('/setup') ? 'bg-blue-700 text-blue-100' : ''}`}
               data-pendo-id="header-nav-setup"
             >
-              Setup Wizard
+              Setup
             </Link>
-            <a href="#" className="hover:text-blue-300 transition-colors" data-pendo-id="header-nav-documentation">Documentation</a>
-            <a href="#" className="hover:text-blue-300 transition-colors" data-pendo-id="header-nav-support">Support</a>
           </nav>
           
-          <div className="flex items-center space-x-3">
-            <Button variant="ghost" size="sm" className="text-white hover:bg-blue-800" data-pendo-id="header-status-button">
-              <Activity className="h-4 w-4 mr-2" />
-              Status
+          <div className="flex items-center space-x-2" data-pendo-id="header-action-buttons">
+            <Button variant="ghost" size="sm" className="text-white hover:bg-blue-800 px-2" data-pendo-id="header-button-status">
+              <Activity className="h-4 w-4" />
+              <span className="sr-only">Status</span>
             </Button>
-            <Button variant="ghost" size="sm" className="text-white hover:bg-blue-800" data-pendo-id="header-settings-button">
+            <Button variant="ghost" size="sm" className="text-white hover:bg-blue-800 px-2" data-pendo-id="header-button-settings">
               <Settings className="h-4 w-4" />
+              <span className="sr-only">Settings</span>
             </Button>
-            <Button variant="ghost" size="sm" className="text-white hover:bg-blue-800" data-pendo-id="header-user-button">
+            <Button variant="ghost" size="sm" className="text-white hover:bg-blue-800 px-2" data-pendo-id="header-button-user">
               <User className="h-4 w-4" />
+              <span className="sr-only">User Profile</span>
             </Button>
           </div>
         </div>
