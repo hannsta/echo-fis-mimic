@@ -1,8 +1,12 @@
 
 import { Code, Activity, Settings, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+  
+  const isActive = (path: string) => location.pathname === path;
   return (
     <header className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white shadow-lg">
       <div className="container mx-auto px-6 py-4">
@@ -18,9 +22,28 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#" className="hover:text-blue-300 transition-colors" data-pendo-id="header-nav-apis">APIs</a>
+            <Link 
+              to="/" 
+              className={`hover:text-blue-300 transition-colors ${isActive('/') ? 'text-blue-300 font-medium' : ''}`}
+              data-pendo-id="header-nav-dashboard"
+            >
+              Dashboard
+            </Link>
+            <Link 
+              to="/integration" 
+              className={`hover:text-blue-300 transition-colors ${isActive('/integration') ? 'text-blue-300 font-medium' : ''}`}
+              data-pendo-id="header-nav-integration"
+            >
+              Integration
+            </Link>
+            <Link 
+              to="/setup" 
+              className={`hover:text-blue-300 transition-colors ${isActive('/setup') ? 'text-blue-300 font-medium' : ''}`}
+              data-pendo-id="header-nav-setup"
+            >
+              Setup Wizard
+            </Link>
             <a href="#" className="hover:text-blue-300 transition-colors" data-pendo-id="header-nav-documentation">Documentation</a>
-            <a href="#" className="hover:text-blue-300 transition-colors" data-pendo-id="header-nav-sandbox">Sandbox</a>
             <a href="#" className="hover:text-blue-300 transition-colors" data-pendo-id="header-nav-support">Support</a>
           </nav>
           

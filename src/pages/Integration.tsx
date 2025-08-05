@@ -1,15 +1,14 @@
-
 import Header from "@/components/Header";
-import Dashboard from "@/components/Dashboard";
+import CodeExamples from "@/components/CodeExamples";
 
-const Index = () => {
+const Integration = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       
       <main className="container mx-auto px-6 py-8">
-        <div data-pendo-id="dashboard-content">
-          <Dashboard />
+        <div data-pendo-id="integration-content">
+          <CodeExamples />
         </div>
       </main>
       
@@ -33,4 +32,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Integration;
