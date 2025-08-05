@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import Dashboard from "@/components/Dashboard";
 import CodeExamples from "@/components/CodeExamples";
+import SetupWizard from "@/components/SetupWizard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Index = () => {
@@ -12,9 +13,10 @@ const Index = () => {
       <main className="container mx-auto px-6 py-8">
         <Tabs defaultValue="dashboard" className="w-full" data-pendo-id="main-navigation-tabs">
           <div className="flex justify-center mb-8">
-            <TabsList className="grid w-full max-w-md grid-cols-2">
+            <TabsList className="grid w-full max-w-2xl grid-cols-3">
               <TabsTrigger value="dashboard" data-pendo-id="main-tab-dashboard">Dashboard</TabsTrigger>
               <TabsTrigger value="integration" data-pendo-id="main-tab-integration">Integration</TabsTrigger>
+              <TabsTrigger value="setup" data-pendo-id="main-tab-setup">Setup Wizard</TabsTrigger>
             </TabsList>
           </div>
           
@@ -24,6 +26,10 @@ const Index = () => {
           
           <TabsContent value="integration" data-pendo-id="integration-content">
             <CodeExamples />
+          </TabsContent>
+          
+          <TabsContent value="setup" data-pendo-id="setup-content">
+            <SetupWizard />
           </TabsContent>
         </Tabs>
       </main>
