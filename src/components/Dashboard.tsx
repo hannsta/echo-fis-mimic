@@ -65,7 +65,7 @@ const balance = await fis.accounts
             <Database className="h-4 w-4 text-blue-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">24</div>
+            <div className="text-2xl font-bold">26</div>
             <p className="text-xs text-muted-foreground">+3 from last month</p>
           </CardContent>
         </Card>
