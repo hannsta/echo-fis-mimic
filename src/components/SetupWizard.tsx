@@ -148,9 +148,8 @@ const SetupWizard = () => {
               <Select 
                 value={formData.integrationType} 
                 onValueChange={(value) => setFormData(prev => ({...prev, integrationType: value}))}
-                data-pendo-id="integration-type-dropdown"
               >
-                <SelectTrigger>
+                <SelectTrigger data-pendo-id="integration-type-dropdown">
                   <SelectValue placeholder="Choose your FIS API integration" />
                 </SelectTrigger>
                 <SelectContent>
@@ -185,9 +184,8 @@ const SetupWizard = () => {
                 <Select 
                   value={formData.environment}
                   onValueChange={(value) => setFormData(prev => ({...prev, environment: value}))}
-                  data-pendo-id="environment-selector"
                 >
-                  <SelectTrigger>
+                  <SelectTrigger data-pendo-id="environment-selector">
                     <SelectValue placeholder="Select environment" />
                   </SelectTrigger>
                   <SelectContent>
